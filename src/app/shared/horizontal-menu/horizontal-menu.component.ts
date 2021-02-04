@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./horizontal-menu.component.scss']
 })
 export class HorizontalMenuComponent implements OnInit, AfterViewInit, OnDestroy {
-
+  logoUrl = 'assets/img/logo.png';
   public menuItems: any[];
   public config: any = {};
   level: number = 0;

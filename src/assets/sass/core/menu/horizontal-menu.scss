@@ -137,7 +137,7 @@
         margin-right: 0.5rem;
 
         &.active:not(.dropdown-submenu) {
-          background-color: map-get($primary-color, lighten-4);
+          background-color: white;
           border-radius: $border-radius;
 
           >a {
@@ -291,7 +291,7 @@
   &.navbar-horizontal {
     position: fixed;
     width: 100%;
-    background-color: $body-bg;
+    background-color: #ffffff;
     top: 4rem;
   }
 }
