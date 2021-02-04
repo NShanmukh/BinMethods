@@ -7,7 +7,7 @@
     <ul appTopMenuDropdown class="navigation-main nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
       <!-- First level menu -->
       <div class="logo-img"><img class="logo-img" alt="Apex logo" [src]="logoUrl"></div>
-      <span class="text-bold-600" style="color: red;">Bin Methods</span>
+      <!-- <span class="text-bold-600" style="color: red;">Bin Methods</span> -->
 
       <li appTopMenulink *ngFor="let menuItem of menuItems" [parent]="menuItem.title" level="{{level + 1}}"
         [attr.data-menu]="menuItem.class === 'dropdown nav-item' ? 'dropdown' : null" [ngClass]="[menuItem.class]"

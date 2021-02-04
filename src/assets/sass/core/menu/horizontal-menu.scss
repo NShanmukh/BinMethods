@@ -18,10 +18,8 @@
 // Horizontal Menu
 //=========================
 .horizontal-menu {
-
   &.navbar-sticky,
   & {
-
     // .header-navbar {
     //   position: fixed;
     //   top: 0;
@@ -44,6 +42,7 @@
     nav.header-navbar {
       position: fixed;
       top: 0;
+      height: 60px !important;
       width: 100%;
     }
   }
@@ -87,21 +86,21 @@
     //dropdown menu animation remove
     .dropdown {
       i {
-        margin-right: .5rem;
+        margin-right: 0.5rem;
       }
 
       .dropdown-menu {
         transition: none;
         margin-top: 1px;
         min-width: 16rem;
-        animation: .8s cubic-bezier(.25, .8, .25, 1) 0s normal forwards 1 fadein;
+        animation: 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) 0s normal forwards 1 fadein;
 
         .dropdown-submenu .dropdown-menu {
           top: 8px;
           margin-left: 1px;
         }
 
-        >li {
+        > li {
           &:first-child {
             border-top-left-radius: $border-radius;
             border-top-right-radius: $border-radius;
@@ -119,9 +118,9 @@
       padding-left: 0.5rem;
 
       .nav-link {
-        padding: 0.5rem .75rem .45rem;
-        font-weight: 500;
-        color: $body-color;
+        padding: 0.5rem 0.75rem 0.45rem;
+        font-weight: bold;
+        color: black;
 
         &:not(.dropdown-toggle) {
           display: flex;
@@ -129,30 +128,31 @@
         }
 
         i {
-          margin-right: .5rem;
+          margin-right: 0.5rem;
         }
       }
 
-      >ul>li {
+      > ul > li {
         margin-right: 0.5rem;
 
         &.active:not(.dropdown-submenu) {
-          background-color: white;
+          // background-color: white;
           border-radius: $border-radius;
 
-          >a {
-            color: map-get($primary-color, darken-1);
+          > a {
+            color: red;
+            font-weight: bold;
           }
         }
 
-        &:hover:not(.active) {
-          background-color: $menu-active-bg;
-          border-radius: $border-radius;
-        }
+        // &:hover:not(.active) {
+        // background-color: $menu-active-bg;
+        // border-radius: $border-radius;
+        // }
 
         &.show {
           .dropdown-menu {
-            animation: .8s cubic-bezier(.25, .8, .25, 1) 0s normal forwards 1 fadein;
+            animation: 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) 0s normal forwards 1 fadein;
 
             li.show {
               background-color: $menu-active-bg;
@@ -167,14 +167,13 @@
               color: map-get($primary-color, base) !important;
             }
 
-            >.dropdown-item:hover,
+            > .dropdown-item:hover,
             &:hover,
-            >.dropdown-item:hover:active,
+            > .dropdown-item:hover:active,
             &:hover:active {
               background-color: map-get($primary-color, lighten-4) !important;
               color: map-get($primary-color, base) !important;
             }
-
           }
         }
 
@@ -192,9 +191,9 @@
   }
 
   &:not(.layout-dark) {
-    .navbar-horizontal .main-menu-content>ul>li.show {
+    .navbar-horizontal .main-menu-content > ul > li.show {
       .dropdown-menu {
-        animation: .8s cubic-bezier(.25, .8, .25, 1) 0s normal forwards 1 fadein;
+        animation: 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) 0s normal forwards 1 fadein;
 
         li.show {
           background-color: $menu-active-bg;
@@ -202,7 +201,6 @@
         }
 
         .dropdown-item {
-
           &.active,
           &:active,
           &:focus {
@@ -216,7 +214,7 @@
       li.active.dropdown-submenu {
         background-color: $menu-active-bg;
 
-        >.dropdown-item:hover,
+        > .dropdown-item:hover,
         &:hover {
           background-color: $menu-active-bg;
         }
@@ -226,7 +224,6 @@
 
   // Customizer changes
   .customizer {
-
     .ct-bg-color,
     .ct-bg-image,
     .ct-bg-image-toggler,
@@ -238,7 +235,6 @@
 
   &.layout-transparent {
     .customizer {
-
       .ct-bg-color,
       .ct-bg-image {
         display: block !important;
@@ -249,7 +245,7 @@
   // Horizontal top navbar Styling
   nav.navbar {
     .navbar-header .nav-item {
-      padding-top: .25rem;
+      padding-top: 0.25rem;
       // padding-bottom: .25rem;
     }
   }
@@ -273,8 +269,8 @@
 
 // margin right for icons of sub-menu of main-menu
 .horizontal-menu {
-  .main-menu .navigation>li {
-    >ul>li>a i {
+  .main-menu .navigation > li {
+    > ul > li > a i {
       margin-right: 0.5rem;
     }
   }
@@ -291,7 +287,7 @@
   &.navbar-horizontal {
     position: fixed;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #ffeb00;
     top: 4rem;
   }
 }
@@ -309,7 +305,6 @@
 
   // Customizer changes
   .customizer {
-
     .ct-bg-color,
     .ct-bg-image,
     .ct-bg-image-toggler,
@@ -321,7 +316,6 @@
 
   &.layout-transparent {
     .customizer {
-
       .ct-bg-color,
       .ct-bg-image {
         display: block !important;
@@ -359,9 +353,9 @@
     &.vertical-overlay-menu {
       .main-menu {
         .navigation {
-          >li {
-            >a {
-              >span {
+          > li {
+            > a {
+              > span {
                 &.badge {
                   position: absolute;
                   top: 11px;
@@ -374,16 +368,16 @@
           li {
             &.nav-item {
               &.menu-collapsed-open {
-                >a {
+                > a {
                   background: none;
                   margin: 0;
                   border-radius: 0;
 
-                  ~ul {
+                  ~ ul {
                     li {
                       &.menu-collapsed-open {
-                        >a {
-                          ~ul {
+                        > a {
+                          ~ ul {
                             margin-top: 4px;
 
                             li {
@@ -413,11 +407,11 @@
   &.horizontal-menu.menu-collapsed {
     .main-menu {
       .navigation {
-        >li>a {
+        > li > a {
           padding: 14px 16px !important;
         }
 
-        >li.navigation-header .feather.icon-minus {
+        > li.navigation-header .feather.icon-minus {
           padding: 12px 0px;
         }
       }
@@ -428,8 +422,8 @@
     .header-navbar.navbar {
       .dropdown-menu {
         .dropdown-submenu {
-          >a:after {
-            content: '\f104' !important;
+          > a:after {
+            content: "\f104" !important;
           }
         }
       }
